@@ -19,13 +19,15 @@ Bus Analysis: Provides information notes on the ideal VRAM capacities expected o
 
 💻 Technical Details
 
-Language: Python
+Software Language: Python
 
 Interface: CustomTkinter (Modern, Windows 11 Compatible)
 
 Theme Support: Light and Dark modes with instant language synchronization
 
 Portability: Portable (no installation required).
+
+Language: English, Türkçe
 
 👨‍💻 Developer Information
 
