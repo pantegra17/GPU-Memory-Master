@@ -1,38 +1,51 @@
 # GPU Memory Master
-GPU Memory Master is a professional technical analysis tool developed for graphics card enthusiasts, system builders, and hardware editors. It allows you to decipher complex memory architectures and verify the raw processing power of GPUs using limited available data.
 
-🛠 Key Features
+A modern desktop application built with Python and CustomTkinter designed for analyzing GPU hardware specifications and calculating memory bandwidth, compute throughput (TFLOPS), and AI performance (TOPS).
 
-Intelligent VRAM Decoder
+## Features
 
-Missing Data Completion: By entering any two of the Effective Speed ​​(Gbps), Bus (Bit), or Bandwidth (GB/s) values, it accurately calculates the missing third value in seconds.
+- **Cloud Preset Database:** Dynamically retrieves up-to-date specifications for modern GPUs directly from GitHub on launch.
+- **Live Autocomplete Search:** Type any model number (such as `5090`, `4080`, or `7900`) to instantly filter and auto-fill hardware parameters.
+- **Memory Analysis:** Automatically calculates bandwidth (GB/s), effective speed (Gbps), and memory bus width (Bit).
+- **Compute Power:** Computes FP32 TFLOPS based on architecture multipliers, shading units, and boost clock frequencies.
+- **AI Performance:** Calculates INT8/FP8 AI TOPS for supported modern architectures (Blackwell, Ada/Ampere, RDNA 3+, Intel Battlemage/Alchemist).
+- **Interactive & Editable:** All pre-filled fields remain fully editable for custom overclocking and simulation scenarios.
 
-Full Compliance with GDDR7 Standards: Supports the latest memory technologies. It guarantees technical accuracy by separately reporting the critical WCK (Write Clock - 16x) and CK (Command Clock - 32x) speeds for the GDDR7 architecture.
+## Supported Architectures
 
-Precise TFLOPS Analysis
+- **NVIDIA:** Blackwell, Ada Lovelace, Ampere, Turing, Pascal, Maxwell
+- **AMD:** RDNA 3 / 4 / 5+, RDNA 1 / 2, GCN 1-5
+- **Intel:** Arc Battlemage (B-Series), Arc Alchemist (A-Series)
 
-FP32 (Single Precision) Calculation: Using GPU core count (Cuda/SP/ALU) and Boost clock speed (OC) data, it calculates the card's theoretical processing power using industry-standard formulas.
+## Requirements
 
-VRAM Capacity Guide
+- Python 3.10 or higher
+- `customtkinter` 5.2.0 or higher
 
-Bus Analysis: Provides information notes on the ideal VRAM capacities expected on a graphics card based on the selected bit value (e.g., 128-bit, 256-bit).
+## Installation
 
-💻 Technical Details
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/pantegra17/GPU-Memory-Master.git
+   cd GPU-Memory-Master
+   ```
 
-Software Language: Python
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Interface: CustomTkinter (Modern, Windows 11 Compatible)
+3. Run the application:
+   ```bash
+   python main.py
+   ```
 
-Theme Support: Light and Dark modes with instant language synchronization
+## Author
 
-Portability: Portable (no installation required).
+- **Developer:** Gökhan Can
+- **Contact:** pantegra@gmail.com
+- **GitHub:** [@pantegra17](https://github.com/pantegra17)
 
-Language: English, Türkçe
+## License
 
-👨‍💻 Developer Information
-
-Developer: Gökhan Can
-
-Co-owner: Gemini AI
-
-Contact: gokhancan@yandex.com
+This project is open source and available under the MIT License.
