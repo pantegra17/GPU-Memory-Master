@@ -1,0 +1,344 @@
+{
+  "NVIDIA": {
+    "GeForce RTX 5090": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "512",
+      "speed": "28",
+      "cores": "21760",
+      "clock": "2407"
+    },
+    "GeForce RTX 5080": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "256",
+      "speed": "30",
+      "cores": "10752",
+      "clock": "2685"
+    },
+    "GeForce RTX 4090": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "384",
+      "speed": "21",
+      "cores": "16384",
+      "clock": "2520"
+    },
+    "GeForce RTX 4080 Super": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "256",
+      "speed": "23",
+      "cores": "10240",
+      "clock": "2550"
+    },
+    "GeForce RTX 4080": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "256",
+      "speed": "22.4",
+      "cores": "9728",
+      "clock": "2505"
+    },
+    "GeForce RTX 4070 Ti Super": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "256",
+      "speed": "21",
+      "cores": "8448",
+      "clock": "2610"
+    },
+    "GeForce RTX 4070 Ti": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "192",
+      "speed": "21",
+      "cores": "7680",
+      "clock": "2610"
+    },
+    "GeForce RTX 4070 Super": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "192",
+      "speed": "21",
+      "cores": "7168",
+      "clock": "2475"
+    },
+    "GeForce RTX 4070": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "192",
+      "speed": "21",
+      "cores": "5888",
+      "clock": "2475"
+    },
+    "GeForce RTX 4060 Ti": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "128",
+      "speed": "18",
+      "cores": "4352",
+      "clock": "2535"
+    },
+    "GeForce RTX 4060": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "128",
+      "speed": "17",
+      "cores": "3072",
+      "clock": "2460"
+    },
+    "GeForce RTX 3090 Ti": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "384",
+      "speed": "21",
+      "cores": "10752",
+      "clock": "1860"
+    },
+    "GeForce RTX 3090": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "384",
+      "speed": "19.5",
+      "cores": "10496",
+      "clock": "1695"
+    },
+    "GeForce RTX 3080 Ti": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "384",
+      "speed": "19",
+      "cores": "10240",
+      "clock": "1665"
+    },
+    "GeForce RTX 3080": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "320",
+      "speed": "19",
+      "cores": "8704",
+      "clock": "1710"
+    },
+    "GeForce RTX 3070 Ti": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "256",
+      "speed": "19",
+      "cores": "6144",
+      "clock": "1770"
+    },
+    "GeForce RTX 3070": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "5888",
+      "clock": "1725"
+    },
+    "GeForce RTX 3060 Ti": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "4864",
+      "clock": "1665"
+    },
+    "GeForce RTX 3060": {
+      "arch": "Ampere / Ada (2020-2024)",
+      "bus": "192",
+      "speed": "15",
+      "cores": "3584",
+      "clock": "1777"
+    },
+    "GeForce RTX 2080 Ti": {
+      "arch": "Turing (2018-2020)",
+      "bus": "352",
+      "speed": "14",
+      "cores": "4352",
+      "clock": "1545"
+    },
+    "GeForce RTX 2080 Super": {
+      "arch": "Turing (2018-2020)",
+      "bus": "256",
+      "speed": "15.5",
+      "cores": "3072",
+      "clock": "1815"
+    },
+    "GeForce RTX 2070 Super": {
+      "arch": "Turing (2018-2020)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "2560",
+      "clock": "1770"
+    },
+    "GeForce RTX 2060 Super": {
+      "arch": "Turing (2018-2020)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "2176",
+      "clock": "1650"
+    },
+    "GeForce GTX 1080 Ti": {
+      "arch": "Pascal (2016-2018)",
+      "bus": "352",
+      "speed": "11",
+      "cores": "3584",
+      "clock": "1582"
+    },
+    "GeForce GTX 1080": {
+      "arch": "Pascal (2016-2018)",
+      "bus": "256",
+      "speed": "10",
+      "cores": "2560",
+      "clock": "1733"
+    },
+    "GeForce GTX 1070": {
+      "arch": "Pascal (2016-2018)",
+      "bus": "256",
+      "speed": "8",
+      "cores": "1920",
+      "clock": "1683"
+    },
+    "GeForce GTX 1060 6GB": {
+      "arch": "Pascal (2016-2018)",
+      "bus": "192",
+      "speed": "8",
+      "cores": "1280",
+      "clock": "1708"
+    }
+  },
+  "AMD": {
+    "Radeon RX 7900 XTX": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "384",
+      "speed": "20",
+      "cores": "6144",
+      "clock": "2500"
+    },
+    "Radeon RX 7900 XT": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "320",
+      "speed": "20",
+      "cores": "5376",
+      "clock": "2400"
+    },
+    "Radeon RX 7900 GRE": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "256",
+      "speed": "18",
+      "cores": "5120",
+      "clock": "2245"
+    },
+    "Radeon RX 7800 XT": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "256",
+      "speed": "19.5",
+      "cores": "3840",
+      "clock": "2430"
+    },
+    "Radeon RX 7700 XT": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "192",
+      "speed": "18",
+      "cores": "3456",
+      "clock": "2544"
+    },
+    "Radeon RX 7600 XT": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "128",
+      "speed": "18",
+      "cores": "2048",
+      "clock": "2755"
+    },
+    "Radeon RX 7600": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "128",
+      "speed": "18",
+      "cores": "2048",
+      "clock": "2655"
+    },
+    "Radeon RX 6950 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "256",
+      "speed": "18",
+      "cores": "5120",
+      "clock": "2310"
+    },
+    "Radeon RX 6900 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "256",
+      "speed": "16",
+      "cores": "5120",
+      "clock": "2250"
+    },
+    "Radeon RX 6800 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "256",
+      "speed": "16",
+      "cores": "4608",
+      "clock": "2250"
+    },
+    "Radeon RX 6800": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "256",
+      "speed": "16",
+      "cores": "3840",
+      "clock": "2105"
+    },
+    "Radeon RX 6700 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "192",
+      "speed": "16",
+      "cores": "2560",
+      "clock": "2581"
+    },
+    "Radeon RX 6600 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "128",
+      "speed": "16",
+      "cores": "2048",
+      "clock": "2589"
+    },
+    "Radeon RX 5700 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "2560",
+      "clock": "1905"
+    },
+    "Radeon RX 580": {
+      "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
+      "bus": "256",
+      "speed": "8",
+      "cores": "2304",
+      "clock": "1340"
+    }
+  },
+  "Intel": {
+    "Arc B580": {
+      "arch": "Arc B-Series (Battlemage) (2024+)",
+      "bus": "192",
+      "speed": "19",
+      "cores": "2560",
+      "clock": "2670"
+    },
+    "Arc B570": {
+      "arch": "Arc B-Series (Battlemage) (2024+)",
+      "bus": "160",
+      "speed": "19",
+      "cores": "2304",
+      "clock": "2500"
+    },
+    "Arc A770": {
+      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "bus": "256",
+      "speed": "17.5",
+      "cores": "4096",
+      "clock": "2100"
+    },
+    "Arc A750": {
+      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "bus": "256",
+      "speed": "16",
+      "cores": "3584",
+      "clock": "2050"
+    },
+    "Arc A580": {
+      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "bus": "256",
+      "speed": "16",
+      "cores": "3072",
+      "clock": "1700"
+    },
+    "Arc A380": {
+      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "bus": "96",
+      "speed": "15.5",
+      "cores": "1024",
+      "clock": "2000"
+    }
+  }
+}
