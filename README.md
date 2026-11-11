@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="ikon.png" alt="GPU Memory Master Logo" width="100">
+</p>
+
 # GPU Memory Master
 
 A modern desktop application built with Python and CustomTkinter designed for analyzing GPU hardware specifications and calculating memory bandwidth, compute throughput (TFLOPS), and AI performance (TOPS).

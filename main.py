@@ -167,7 +167,6 @@ class App(ctk.CTk):
         self.popup = tk.Toplevel(self)
         self.popup.withdraw()
         self.popup.overrideredirect(True)
-        self.popup.attributes("-topmost", True)
 
         self.pop_frame = tk.Frame(self.popup, bg="#1E88E5", bd=1)
         self.pop_frame.pack(fill="both", expand=True)
@@ -196,9 +195,12 @@ class App(ctk.CTk):
         self.pop_listbox.bind("<Return>", self.on_listbox_enter)
         self.pop_listbox.bind("<Escape>", lambda e: self.hide_suggestions())
 
-        # Dismiss popup on outside clicks or when main window moves
+        # Dismiss popup on outside clicks, window moves, deactivation, or loss of focus
         self.bind_all("<Button-1>", self.on_global_click, add="+")
         self.bind("<Configure>", self.on_window_configure, add="+")
+        self.bind("<Deactivate>", lambda e: self.hide_suggestions(), add="+")
+        self.bind("<Unmap>", lambda e: self.hide_suggestions(), add="+")
+        self.bind("<FocusOut>", self.on_window_focus_out, add="+")
 
     def show_suggestions(self, matches):
         if not matches:
@@ -217,6 +219,10 @@ class App(ctk.CTk):
         item_count = len(matches)
         h = min(200, item_count * 26 + 4)
 
+        # Only set topmost if parent window is set to topmost
+        is_top = bool(self.check_topmost.get())
+        self.popup.attributes("-topmost", is_top)
+
         self.popup.geometry(f"{w}x{h}+{x}+{y}")
         self.popup.deiconify()
         self.popup.lift()
@@ -224,6 +230,17 @@ class App(ctk.CTk):
     def hide_suggestions(self):
         if hasattr(self, "popup") and self.popup.winfo_ismapped():
             self.popup.withdraw()
+
+    def on_window_focus_out(self, event):
+        self.after(50, self._check_focus_lost)
+
+    def _check_focus_lost(self):
+        try:
+            focused = self.focus_get()
+            if focused is None:
+                self.hide_suggestions()
+        except Exception:
+            self.hide_suggestions()
 
     def on_model_key_release(self, event):
         """Triggered on keystrokes in the search box; opens/updates dropdown."""
@@ -239,12 +256,19 @@ class App(ctk.CTk):
         query = self.ent_model.get().strip().lower()
 
         if not query:
-            filtered = all_models
-        else:
-            filtered = [m for m in all_models if query in m.lower()]
+            self.hide_suggestions()
+            return
 
-        if filtered:
-            self.show_suggestions(filtered)
+        matches = [m for m in all_models if query in m.lower()]
+
+        # If user has already typed the exact full model name, hide suggestions
+        if len(matches) == 1 and matches[0].lower() == query:
+            self.hide_suggestions()
+            self.apply_gpu_preset(matches[0])
+            return
+
+        if matches:
+            self.show_suggestions(matches)
         else:
             self.hide_suggestions()
 
@@ -259,6 +283,7 @@ class App(ctk.CTk):
 
     def on_model_enter(self, event):
         """Enter key selects exact or top matching model."""
+        self.hide_suggestions()
         brand = self.combo_brand.get()
         all_models = list(self.gpu_database.get(brand, {}).keys())
         query = self.ent_model.get().strip().lower()
@@ -266,7 +291,6 @@ class App(ctk.CTk):
         matches = [m for m in all_models if query in m.lower()] if query else all_models
         if matches:
             self.select_model(matches[0])
-            self.hide_suggestions()
 
     def toggle_model_dropdown(self):
         """Toggles full model list dropdown when clicking the arrow button."""
@@ -294,9 +318,9 @@ class App(ctk.CTk):
         if sel:
             selected_model = self.pop_listbox.get(sel[0]).strip()
             self.select_model(selected_model)
-            self.hide_suggestions()
 
     def select_model(self, model_name):
+        self.hide_suggestions()
         self.ent_model.delete(0, "end")
         self.ent_model.insert(0, model_name)
         self.apply_gpu_preset(model_name)
@@ -495,7 +519,12 @@ class App(ctk.CTk):
             self.lbl_res_tops.configure(text=f"{self.ent_tops.get()} TOPS")
         except: messagebox.showerror("Error", "Check inputs!")
 
-    def toggle_topmost(self): self.attributes("-topmost", self.check_topmost.get())
+    def toggle_topmost(self):
+        is_top = bool(self.check_topmost.get())
+        self.attributes("-topmost", is_top)
+        if hasattr(self, "popup"):
+            self.popup.attributes("-topmost", is_top)
+
     def show_about_window(self):
         if self.about_window and self.about_window.winfo_exists(): self.about_window.lift(); return
         self.about_window = ctk.CTkToplevel(self); self.about_window.title("About"); self.about_window.geometry("400x250"); self.about_window.attributes("-topmost", True); self.about_window.grab_set()
