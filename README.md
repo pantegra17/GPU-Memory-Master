@@ -6,6 +6,12 @@
 
 A modern desktop application built with Python and CustomTkinter designed for analyzing GPU hardware specifications and calculating memory bandwidth, compute throughput (TFLOPS), and AI performance (TOPS).
 
+<img width="542" height="692" alt="image" src="https://github.com/user-attachments/assets/f7c777be-2da2-41b6-9276-626d559f17c3" />
+<img width="542" height="692" alt="image" src="https://github.com/user-attachments/assets/9e134fb0-2103-44ef-9b35-9c60b6182b93" />
+<img width="542" height="692" alt="image" src="https://github.com/user-attachments/assets/64a09101-3014-43fe-b2f0-947380c5d439" />
+
+
+
 ## Features
 
 - **Cloud Preset Database:** Dynamically retrieves up-to-date specifications for modern GPUs directly from GitHub on launch.
