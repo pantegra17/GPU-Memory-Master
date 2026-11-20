@@ -17,11 +17,34 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Create Release
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Extract What's New Notes
+        run: |
+          python -c "
+          import re
+          try:
+              content = open('README.md', encoding='utf-8').read()
+              m = re.search(r\"## What's New[^\n]*\n([\s\S]*?)(?=\n## |\n<|\Z)\", content)
+              notes = m.group(0).strip() if m else ''
+          except Exception:
+              notes = ''
+          with open('release_notes.md', 'w', encoding='utf-8') as f:
+              f.write(notes + '\n\n')
+          "
+
+      - name: Publish GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG_NAME="${{ github.ref_name }}"
+          if gh release view "$TAG_NAME" >/dev/null 2>&1; then
+            gh release delete "$TAG_NAME" --yes
+          fi
           gh release create "$TAG_NAME" \
             --title "GPU Memory Master $TAG_NAME" \
+            --notes-file release_notes.md \
             --generate-notes
