@@ -105,6 +105,13 @@
       "cores": "8704",
       "clock": "1710"
     },
+    "GeForce RTX 3080 12GB": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "384",
+      "speed": "19",
+      "cores": "8960",
+      "clock": "1710"
+    },
     "GeForce RTX 3070 Ti": {
       "arch": "Ampere (2020-2022)",
       "bus": "256",
@@ -132,6 +139,20 @@
       "speed": "15",
       "cores": "3584",
       "clock": "1777"
+    },
+    "GeForce RTX 3050 8GB": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "128",
+      "speed": "14",
+      "cores": "2560",
+      "clock": "1777"
+    },
+    "GeForce RTX 3050 6GB": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "96",
+      "speed": "14",
+      "cores": "2304",
+      "clock": "1470"
     },
     "GeForce RTX 2080 Ti": {
       "arch": "Turing (2018-2020)",
