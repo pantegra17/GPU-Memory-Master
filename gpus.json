@@ -264,7 +264,7 @@
       "bus": "192",
       "speed": "28",
       "cores": "8960",
-      "clock": "2550"
+      "clock": "2055"
     },
     "RTX Pro 2000": {
       "arch": "Blackwell (2024-2026)",
