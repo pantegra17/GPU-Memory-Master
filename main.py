@@ -53,7 +53,7 @@ ARCH_DATA = {
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("GPU Memory Master v10.0")
+        self.title("GPU Memory Master v10.1")
         self.width = 540; self.height = 660 
         self.about_window = None
         self.var_cores = ctk.StringVar(); self.var_clock = ctk.StringVar()
@@ -541,7 +541,7 @@ class App(ctk.CTk):
     def show_about_window(self):
         if self.about_window and self.about_window.winfo_exists(): self.about_window.lift(); return
         self.about_window = ctk.CTkToplevel(self); self.about_window.title("About"); self.about_window.geometry("400x250"); self.about_window.attributes("-topmost", True); self.about_window.grab_set()
-        ctk.CTkLabel(self.about_window, text="GPU Memory Master v10.0", font=("Arial", 20, "bold"), text_color="#1565C0").pack(pady=20)
+        ctk.CTkLabel(self.about_window, text="GPU Memory Master v10.1", font=("Arial", 20, "bold"), text_color="#1565C0").pack(pady=20)
         ctk.CTkLabel(self.about_window, text="Dev: Gökhan Can\nContact: pantegra@gmail.com", font=("Arial", 12)).pack(pady=10)
 
 if __name__ == "__main__": App().mainloop()

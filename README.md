@@ -2,9 +2,16 @@
   <img src="ikon.png" alt="GPU Memory Master Logo" width="100">
 </p>
 
-# GPU Memory Master
+# GPU Memory Master v10.1
 
 A modern desktop application built with Python and CustomTkinter designed for analyzing GPU hardware specifications and calculating memory bandwidth, compute throughput (TFLOPS), and AI performance (TOPS).
+
+## What's New in v10.1
+- **Accurate INT8 AI TOPS:** Recalibrated AI performance calculation multipliers to match official manufacturer specifications for NVIDIA, AMD, and Intel.
+- **Hardware 2:4 Structural Sparsity:** Properly accounted for hardware sparsity on supported NVIDIA architectures (Ada Lovelace, Ampere, Blackwell).
+- **Separated Architectures:** Split NVIDIA Ada Lovelace (RTX 40 series) and Ampere (RTX 30 series) into distinct architectures with dedicated per-generation tensor multipliers.
+- **AMD Radeon RX 9000 Series (RDNA 4):** Added Radeon RX 9070 XT, RX 9070, and RX 9060 XT to the cloud preset database.
+- **Unified Core Architecture:** Standardized input and calculations across all brands for seamless benchmarking and overclocking.
 
 <img width="542" height="692" alt="image" src="https://github.com/user-attachments/assets/f7c777be-2da2-41b6-9276-626d559f17c3" />
 <img width="542" height="692" alt="image" src="https://github.com/user-attachments/assets/9e134fb0-2103-44ef-9b35-9c60b6182b93" />
