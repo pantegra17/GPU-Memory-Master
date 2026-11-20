@@ -217,7 +217,14 @@
       "bus": "128",
       "speed": "20",
       "cores": "2048",
-      "clock": "3230"
+      "clock": "3130"
+    },
+    "Radeon RX 9060": {
+      "arch": "RDNA 4 (2025+)",
+      "bus": "128",
+      "speed": "18",
+      "cores": "1792",
+      "clock": "2990"
     },
     "Radeon RX 7900 XTX": {
       "arch": "RDNA 3 (2022-2024)",
