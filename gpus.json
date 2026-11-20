@@ -271,7 +271,7 @@
       "bus": "128",
       "speed": "18",
       "cores": "4352",
-      "clock": "2550"
+      "clock": "1957"
     },
     "RTX 6000 Ada Generation": {
       "arch": "Ada Lovelace (2022-2024)",
