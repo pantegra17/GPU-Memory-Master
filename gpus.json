@@ -422,6 +422,13 @@
       "bus": "96",
       "speed": "15.5",
       "cores": "1024",
+      "clock": "2050"
+    },
+    "Arc A310": {
+      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "bus": "64",
+      "speed": "15.5",
+      "cores": "768",
       "clock": "2000"
     }
   }
