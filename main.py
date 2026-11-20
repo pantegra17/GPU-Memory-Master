@@ -478,7 +478,7 @@ class App(ctk.CTk):
         ctk.CTkButton(self.tab_comp, text="CALCULATE", command=self.calc_tflops, font=("Arial", 13, "bold"), height=40, fg_color="#C62828").pack(fill="x", pady=15, padx=15)
         self.lbl_res_tflops = ctk.CTkLabel(self.tab_comp, text="", font=("Arial", 22, "bold"), text_color="#C62828"); self.lbl_res_tflops.pack()
 
-        self.ent_ai_cores = self.create_input_row(self.tab_ai, "AI Core Count (Cuda/SP/XMX):", "core", self.var_cores)
+        self.ent_ai_cores = self.create_input_row(self.tab_ai, "AI Core Count (Cuda/SP/ALU):", "core", self.var_cores)
         self.ent_ai_clock = self.create_input_row(self.tab_ai, "Boost Clock (MHz):", "boost", self.var_clock)
         self.ent_tops = self.create_input_row(self.tab_ai, "AI Performance (TOPS):", "result")
         ctk.CTkButton(self.tab_ai, text="CALCULATE", command=self.calc_ai_tops, font=("Arial", 13, "bold"), height=40, fg_color="#6A1B9A").pack(fill="x", pady=15, padx=15)
