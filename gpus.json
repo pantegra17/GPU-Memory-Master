@@ -553,7 +553,7 @@
       "bus": "384",
       "speed": "18",
       "cores": "4480",
-      "clock": "2499"
+      "clock": "2525"
     },
     "Radeon Pro W6800": {
       "arch": "RDNA 1 / 2 (2019-2022)",
