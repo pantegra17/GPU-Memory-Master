@@ -18,7 +18,7 @@ A modern desktop application built with Python and CustomTkinter designed for an
 - **Live Autocomplete Search:** Type any model number (such as `5090`, `4080`, or `7900`) to instantly filter and auto-fill hardware parameters.
 - **Memory Analysis:** Automatically calculates bandwidth (GB/s), effective speed (Gbps), and memory bus width (Bit).
 - **Compute Power:** Computes FP32 TFLOPS based on architecture multipliers, shading units, and boost clock frequencies.
-- **AI Performance:** Calculates INT8/FP8 AI TOPS for supported modern architectures (Blackwell, Ada/Ampere, RDNA 3+, Intel Battlemage/Alchemist).
+- **AI Performance:** Calculates INT8 AI TOPS (including hardware 2:4 Structural Sparsity on supported NVIDIA architectures) for modern GPUs (Blackwell, Ada Lovelace, Ampere, Turing, RDNA 3+, Intel Battlemage/Alchemist).
 - **Interactive & Editable:** All pre-filled fields remain fully editable for custom overclocking and simulation scenarios.
 
 ## Supported Architectures

@@ -32,20 +32,21 @@ def format_num(num):
 ARCH_DATA = {
     "NVIDIA": {
         "Blackwell (2024-2026)": {"ai": 64, "tf": 2},
-        "Ampere / Ada (2020-2024)": {"ai": 32, "tf": 2},
-        "Turing (2018-2020)": {"ai": 16, "tf": 2},
+        "Ada Lovelace (2022-2024)": {"ai": 32, "tf": 2},
+        "Ampere (2020-2022)": {"ai": 16, "tf": 2},
+        "Turing (2018-2020)": {"ai": 32, "tf": 2},
         "Pascal (2016-2018)": {"ai": 0, "tf": 2},
         "Maxwell (2014-2016)": {"ai": 0, "tf": 2}
     },
     "AMD": {
-        "RDNA 3 / 4 / 5+ (2022-2026)": {"ai": 128, "tf": 4},
+        "RDNA 3 / 4 / 5+ (2022-2026)": {"ai": 8, "tf": 4},
         "RDNA 1 / 2 (2019-2022)": {"ai": 0, "tf": 2},
         "GCN 4 / 5 (Polaris/Vega) (2016-2019)": {"ai": 0, "tf": 2},
         "GCN 1 / 2 / 3 (HD 7000 to R9) (2012-2016)": {"ai": 0, "tf": 2}
     },
     "Intel": {
-        "Arc B-Series (Battlemage) (2024+)": {"ai": 512, "tf": 2},
-        "Arc A-Series (Alchemist) (2022-2024)": {"ai": 256, "tf": 2}
+        "Arc B-Series (Battlemage) (2024+)": {"ai": 32, "tf": 2},
+        "Arc A-Series (Alchemist) (2022-2024)": {"ai": 32, "tf": 2}
     }
 }
 
@@ -84,6 +85,16 @@ class App(ctk.CTk):
         x = (sw // 2) - (width // 2); y = (sh // 2) - (height // 2)
         window.geometry(f"{width}x{height}+{x}+{y}")
 
+    def _normalize_database(self, data):
+        """Ensures architecture names are normalized (e.g. separates Ampere and Ada Lovelace)."""
+        if isinstance(data, dict) and "NVIDIA" in data:
+            for gpu_name, specs in data["NVIDIA"].items():
+                if specs.get("arch") == "Ampere / Ada (2020-2024)":
+                    if any(k in gpu_name for k in ["4090", "4080", "4070", "4060"]):
+                        specs["arch"] = "Ada Lovelace (2022-2024)"
+                    else:
+                        specs["arch"] = "Ampere (2020-2022)"
+
     def fetch_database_thread(self):
         """Fetches the GPU database from GitHub; falls back to local gpus.json if available."""
         # 1. Try GitHub Online
@@ -91,6 +102,7 @@ class App(ctk.CTk):
             req = urllib.request.Request(GITHUB_GPU_URL, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=4) as response:
                 data = json.loads(response.read().decode("utf-8"))
+                self._normalize_database(data)
                 self.msg_queue.put(("success", data, "online"))
                 return
         except Exception:
@@ -106,6 +118,7 @@ class App(ctk.CTk):
             try:
                 with open(local_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
+                    self._normalize_database(data)
                     self.msg_queue.put(("success", data, "local"))
                     return
             except Exception:
@@ -149,13 +162,9 @@ class App(ctk.CTk):
         archs = list(ARCH_DATA[brand].keys())
         self.combo_arch.configure(values=archs); self.combo_arch.set(PROMPT_ARCH)
         
-        # Toggle Mirroring: Only for manufacturers with unified core counts
-        if brand == "Intel":
-            self.ent_cores.configure(textvariable=""); self.ent_ai_cores.configure(textvariable="")
-            self.ent_clock.configure(textvariable=""); self.ent_ai_clock.configure(textvariable="")
-        else:
-            self.ent_cores.configure(textvariable=self.var_cores); self.ent_ai_cores.configure(textvariable=self.var_cores)
-            self.ent_clock.configure(textvariable=self.var_clock); self.ent_ai_clock.configure(textvariable=self.var_clock)
+        # Mirroring for unified core counts across all brands
+        self.ent_cores.configure(textvariable=self.var_cores); self.ent_ai_cores.configure(textvariable=self.var_cores)
+        self.ent_clock.configure(textvariable=self.var_clock); self.ent_ai_clock.configure(textvariable=self.var_clock)
 
         # Clear and enable model search entry
         self.ent_model.configure(state="normal", placeholder_text=PROMPT_SEARCH_MODEL)
@@ -361,6 +370,12 @@ class App(ctk.CTk):
 
         # 1. Architecture
         arch = data.get("arch", "")
+        if arch == "Ampere / Ada (2020-2024)":
+            if any(k in model_name for k in ["4090", "4080", "4070", "4060"]):
+                arch = "Ada Lovelace (2022-2024)"
+            else:
+                arch = "Ampere (2020-2022)"
+
         if arch in ARCH_DATA.get(brand, {}):
             self.combo_arch.set(arch)
 
@@ -375,12 +390,6 @@ class App(ctk.CTk):
         clock = data.get("clock", "")
         self.var_cores.set(cores)
         self.var_clock.set(clock)
-
-        if brand == "Intel":
-            self.ent_cores.delete(0, "end"); self.ent_cores.insert(0, cores)
-            self.ent_clock.delete(0, "end"); self.ent_clock.insert(0, clock)
-            self.ent_ai_cores.delete(0, "end"); self.ent_ai_cores.insert(0, cores)
-            self.ent_ai_clock.delete(0, "end"); self.ent_ai_clock.insert(0, clock)
 
         self.ent_tflops.delete(0, "end")
         self.calc_tflops()
@@ -492,6 +501,8 @@ class App(ctk.CTk):
     def calc_tflops(self):
         brand = self.combo_brand.get(); arch = self.combo_arch.get()
         if arch in (PROMPT_ARCH, ""): messagebox.showwarning("Warning", "Select Architecture!"); return
+        if arch == "Ampere / Ada (2020-2024)":
+            arch = "Ada Lovelace (2022-2024)" if any(k in self.ent_model.get() for k in ["4090", "4080", "4070", "4060"]) else "Ampere (2020-2022)"
         try:
             mult = ARCH_DATA[brand][arch]["tf"]; c, clk, tf = self.ent_cores.get(), self.ent_clock.get(), self.ent_tflops.get()
             if c and clk and not tf:
@@ -506,6 +517,8 @@ class App(ctk.CTk):
     def calc_ai_tops(self):
         brand = self.combo_brand.get(); arch = self.combo_arch.get()
         if arch in (PROMPT_ARCH, ""): messagebox.showwarning("Warning", "Select Architecture!"); return
+        if arch == "Ampere / Ada (2020-2024)":
+            arch = "Ada Lovelace (2022-2024)" if any(k in self.ent_model.get() for k in ["4090", "4080", "4070", "4060"]) else "Ampere (2020-2022)"
         try:
             mult = ARCH_DATA[brand][arch]["ai"]
             if mult == 0: messagebox.showinfo("Info", "Legacy architectures do not have dedicated AI TOPS."); return
@@ -516,7 +529,7 @@ class App(ctk.CTk):
                 res_clk = (float(tops) * 1000000) / (float(c) * mult); self.ent_ai_clock.delete(0, "end"); self.ent_ai_clock.insert(0, format_num(res_clk))
             elif tops and clk and not c:
                 res_c = (float(tops) * 1000000) / (float(clk) * mult); self.ent_ai_cores.delete(0, "end"); self.ent_ai_cores.insert(0, format_num(int(res_c)))
-            self.lbl_res_tops.configure(text=f"{self.ent_tops.get()} TOPS")
+            self.lbl_res_tops.configure(text=f"{self.ent_tops.get()} TOPS (INT8)")
         except: messagebox.showerror("Error", "Check inputs!")
 
     def toggle_topmost(self):

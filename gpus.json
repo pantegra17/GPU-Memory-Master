@@ -15,119 +15,119 @@
       "clock": "2685"
     },
     "GeForce RTX 4090": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "384",
       "speed": "21",
       "cores": "16384",
       "clock": "2520"
     },
     "GeForce RTX 4080 Super": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "256",
       "speed": "23",
       "cores": "10240",
       "clock": "2550"
     },
     "GeForce RTX 4080": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "256",
       "speed": "22.4",
       "cores": "9728",
       "clock": "2505"
     },
     "GeForce RTX 4070 Ti Super": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "256",
       "speed": "21",
       "cores": "8448",
       "clock": "2610"
     },
     "GeForce RTX 4070 Ti": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "192",
       "speed": "21",
       "cores": "7680",
       "clock": "2610"
     },
     "GeForce RTX 4070 Super": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "192",
       "speed": "21",
       "cores": "7168",
       "clock": "2475"
     },
     "GeForce RTX 4070": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "192",
       "speed": "21",
       "cores": "5888",
       "clock": "2475"
     },
     "GeForce RTX 4060 Ti": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "128",
       "speed": "18",
       "cores": "4352",
       "clock": "2535"
     },
     "GeForce RTX 4060": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ada Lovelace (2022-2024)",
       "bus": "128",
       "speed": "17",
       "cores": "3072",
       "clock": "2460"
     },
     "GeForce RTX 3090 Ti": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "384",
       "speed": "21",
       "cores": "10752",
       "clock": "1860"
     },
     "GeForce RTX 3090": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "384",
       "speed": "19.5",
       "cores": "10496",
       "clock": "1695"
     },
     "GeForce RTX 3080 Ti": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "384",
       "speed": "19",
       "cores": "10240",
       "clock": "1665"
     },
     "GeForce RTX 3080": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "320",
       "speed": "19",
       "cores": "8704",
       "clock": "1710"
     },
     "GeForce RTX 3070 Ti": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "256",
       "speed": "19",
       "cores": "6144",
       "clock": "1770"
     },
     "GeForce RTX 3070": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "256",
       "speed": "14",
       "cores": "5888",
       "clock": "1725"
     },
     "GeForce RTX 3060 Ti": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "256",
       "speed": "14",
       "cores": "4864",
       "clock": "1665"
     },
     "GeForce RTX 3060": {
-      "arch": "Ampere / Ada (2020-2024)",
+      "arch": "Ampere (2020-2022)",
       "bus": "192",
       "speed": "15",
       "cores": "3584",
@@ -191,6 +191,27 @@
     }
   },
   "AMD": {
+    "Radeon RX 9070 XT": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "256",
+      "speed": "20",
+      "cores": "4096",
+      "clock": "2970"
+    },
+    "Radeon RX 9070": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "256",
+      "speed": "20",
+      "cores": "3584",
+      "clock": "2540"
+    },
+    "Radeon RX 9060 XT": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "128",
+      "speed": "20",
+      "cores": "2048",
+      "clock": "3230"
+    },
     "Radeon RX 7900 XTX": {
       "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
       "bus": "384",
