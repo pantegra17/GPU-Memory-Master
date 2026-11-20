@@ -39,7 +39,8 @@ ARCH_DATA = {
         "Maxwell (2014-2016)": {"ai": 0, "tf": 2}
     },
     "AMD": {
-        "RDNA 3 / 4 / 5+ (2022-2026)": {"ai": 8, "tf": 4},
+        "RDNA 4 (2025+)": {"ai": 64, "tf": 4},
+        "RDNA 3 (2022-2024)": {"ai": 8, "tf": 4},
         "RDNA 1 / 2 (2019-2022)": {"ai": 0, "tf": 2},
         "GCN 4 / 5 (Polaris/Vega) (2016-2019)": {"ai": 0, "tf": 2},
         "GCN 1 / 2 / 3 (HD 7000 to R9) (2012-2016)": {"ai": 0, "tf": 2}
@@ -86,14 +87,22 @@ class App(ctk.CTk):
         window.geometry(f"{width}x{height}+{x}+{y}")
 
     def _normalize_database(self, data):
-        """Ensures architecture names are normalized (e.g. separates Ampere and Ada Lovelace)."""
-        if isinstance(data, dict) and "NVIDIA" in data:
-            for gpu_name, specs in data["NVIDIA"].items():
-                if specs.get("arch") == "Ampere / Ada (2020-2024)":
-                    if any(k in gpu_name for k in ["4090", "4080", "4070", "4060"]):
-                        specs["arch"] = "Ada Lovelace (2022-2024)"
-                    else:
-                        specs["arch"] = "Ampere (2020-2022)"
+        """Ensures architecture names are normalized (e.g. separates Ampere/Ada and RDNA 3/4)."""
+        if isinstance(data, dict):
+            if "NVIDIA" in data:
+                for gpu_name, specs in data["NVIDIA"].items():
+                    if specs.get("arch") == "Ampere / Ada (2020-2024)":
+                        if any(k in gpu_name for k in ["4090", "4080", "4070", "4060"]):
+                            specs["arch"] = "Ada Lovelace (2022-2024)"
+                        else:
+                            specs["arch"] = "Ampere (2020-2022)"
+            if "AMD" in data:
+                for gpu_name, specs in data["AMD"].items():
+                    if specs.get("arch") == "RDNA 3 / 4 / 5+ (2022-2026)":
+                        if any(k in gpu_name for k in ["9070", "9060", "9050"]):
+                            specs["arch"] = "RDNA 4 (2025+)"
+                        else:
+                            specs["arch"] = "RDNA 3 (2022-2024)"
 
     def fetch_database_thread(self):
         """Fetches the GPU database from GitHub; falls back to local gpus.json if available."""
@@ -375,6 +384,11 @@ class App(ctk.CTk):
                 arch = "Ada Lovelace (2022-2024)"
             else:
                 arch = "Ampere (2020-2022)"
+        elif arch == "RDNA 3 / 4 / 5+ (2022-2026)":
+            if any(k in model_name for k in ["9070", "9060", "9050"]):
+                arch = "RDNA 4 (2025+)"
+            else:
+                arch = "RDNA 3 (2022-2024)"
 
         if arch in ARCH_DATA.get(brand, {}):
             self.combo_arch.set(arch)
@@ -503,6 +517,8 @@ class App(ctk.CTk):
         if arch in (PROMPT_ARCH, ""): messagebox.showwarning("Warning", "Select Architecture!"); return
         if arch == "Ampere / Ada (2020-2024)":
             arch = "Ada Lovelace (2022-2024)" if any(k in self.ent_model.get() for k in ["4090", "4080", "4070", "4060"]) else "Ampere (2020-2022)"
+        elif arch == "RDNA 3 / 4 / 5+ (2022-2026)":
+            arch = "RDNA 4 (2025+)" if any(k in self.ent_model.get() for k in ["9070", "9060", "9050"]) else "RDNA 3 (2022-2024)"
         try:
             mult = ARCH_DATA[brand][arch]["tf"]; c, clk, tf = self.ent_cores.get(), self.ent_clock.get(), self.ent_tflops.get()
             if c and clk and not tf:
@@ -519,6 +535,8 @@ class App(ctk.CTk):
         if arch in (PROMPT_ARCH, ""): messagebox.showwarning("Warning", "Select Architecture!"); return
         if arch == "Ampere / Ada (2020-2024)":
             arch = "Ada Lovelace (2022-2024)" if any(k in self.ent_model.get() for k in ["4090", "4080", "4070", "4060"]) else "Ampere (2020-2022)"
+        elif arch == "RDNA 3 / 4 / 5+ (2022-2026)":
+            arch = "RDNA 4 (2025+)" if any(k in self.ent_model.get() for k in ["9070", "9060", "9050"]) else "RDNA 3 (2022-2024)"
         try:
             mult = ARCH_DATA[brand][arch]["ai"]
             if mult == 0: messagebox.showinfo("Info", "Legacy architectures do not have dedicated AI TOPS."); return

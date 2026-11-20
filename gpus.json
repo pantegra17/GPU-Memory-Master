@@ -192,77 +192,77 @@
   },
   "AMD": {
     "Radeon RX 9070 XT": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 4 (2025+)",
       "bus": "256",
       "speed": "20",
       "cores": "4096",
       "clock": "2970"
     },
     "Radeon RX 9070": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 4 (2025+)",
       "bus": "256",
       "speed": "20",
       "cores": "3584",
       "clock": "2520"
     },
     "Radeon RX 9070 GRE": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 4 (2025+)",
       "bus": "192",
       "speed": "18",
       "cores": "3072",
       "clock": "2790"
     },
     "Radeon RX 9060 XT": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 4 (2025+)",
       "bus": "128",
       "speed": "20",
       "cores": "2048",
       "clock": "3230"
     },
     "Radeon RX 7900 XTX": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 3 (2022-2024)",
       "bus": "384",
       "speed": "20",
       "cores": "6144",
       "clock": "2500"
     },
     "Radeon RX 7900 XT": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 3 (2022-2024)",
       "bus": "320",
       "speed": "20",
       "cores": "5376",
       "clock": "2400"
     },
     "Radeon RX 7900 GRE": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 3 (2022-2024)",
       "bus": "256",
       "speed": "18",
       "cores": "5120",
       "clock": "2245"
     },
     "Radeon RX 7800 XT": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 3 (2022-2024)",
       "bus": "256",
       "speed": "19.5",
       "cores": "3840",
       "clock": "2430"
     },
     "Radeon RX 7700 XT": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 3 (2022-2024)",
       "bus": "192",
       "speed": "18",
       "cores": "3456",
       "clock": "2544"
     },
     "Radeon RX 7600 XT": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 3 (2022-2024)",
       "bus": "128",
       "speed": "18",
       "cores": "2048",
       "clock": "2755"
     },
     "Radeon RX 7600": {
-      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "arch": "RDNA 3 (2022-2024)",
       "bus": "128",
       "speed": "18",
       "cores": "2048",

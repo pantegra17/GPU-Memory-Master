@@ -8,8 +8,8 @@ A modern desktop application built with Python and CustomTkinter designed for an
 
 ## What's New in v10.1
 - **Accurate INT8 AI TOPS:** Recalibrated AI performance calculation multipliers to match official manufacturer specifications for NVIDIA, AMD, and Intel.
-- **Hardware 2:4 Structural Sparsity:** Properly accounted for hardware sparsity on supported NVIDIA architectures (Ada Lovelace, Ampere, Blackwell).
-- **Separated Architectures:** Split NVIDIA Ada Lovelace (RTX 40 series) and Ampere (RTX 30 series) into distinct architectures with dedicated per-generation tensor multipliers.
+- **Hardware 2:4 Structural Sparsity:** Properly accounted for hardware sparsity on supported architectures (NVIDIA Ada Lovelace, Ampere, Blackwell, and AMD RDNA 4).
+- **Separated Architectures:** Split NVIDIA Ada Lovelace / Ampere and AMD RDNA 4 / RDNA 3 into distinct architectures with dedicated per-generation tensor/AI multipliers.
 - **AMD Radeon RX 9000 Series (RDNA 4):** Added Radeon RX 9070 XT, RX 9070, RX 9070 GRE, and RX 9060 XT to the cloud preset database.
 - **Unified Core Architecture:** Standardized input and calculations across all brands for seamless benchmarking and overclocking.
 
@@ -25,13 +25,13 @@ A modern desktop application built with Python and CustomTkinter designed for an
 - **Live Autocomplete Search:** Type any model number (such as `5090`, `4080`, or `7900`) to instantly filter and auto-fill hardware parameters.
 - **Memory Analysis:** Automatically calculates bandwidth (GB/s), effective speed (Gbps), and memory bus width (Bit).
 - **Compute Power:** Computes FP32 TFLOPS based on architecture multipliers, shading units, and boost clock frequencies.
-- **AI Performance:** Calculates INT8 AI TOPS (including hardware 2:4 Structural Sparsity on supported NVIDIA architectures) for modern GPUs (Blackwell, Ada Lovelace, Ampere, Turing, RDNA 3+, Intel Battlemage/Alchemist).
+- **AI Performance:** Calculates INT8 AI TOPS (including hardware 2:4 Structural Sparsity on supported architectures) for modern GPUs (Blackwell, Ada Lovelace, Ampere, Turing, RDNA 4, RDNA 3, Intel Battlemage/Alchemist).
 - **Interactive & Editable:** All pre-filled fields remain fully editable for custom overclocking and simulation scenarios.
 
 ## Supported Architectures
 
 - **NVIDIA:** Blackwell, Ada Lovelace, Ampere, Turing, Pascal, Maxwell
-- **AMD:** RDNA 3 / 4 / 5+, RDNA 1 / 2, GCN 1-5
+- **AMD:** RDNA 4, RDNA 3, RDNA 1 / 2, GCN 1-5
 - **Intel:** Arc Battlemage (B-Series), Arc Alchemist (A-Series)
 
 ## Requirements
