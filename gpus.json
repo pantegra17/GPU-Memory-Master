@@ -237,6 +237,174 @@
       "speed": "8",
       "cores": "1280",
       "clock": "1708"
+    },
+    "RTX Pro 6000": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "512",
+      "speed": "28",
+      "cores": "24064",
+      "clock": "2500"
+    },
+    "RTX Pro 5000 48GB": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "384",
+      "speed": "28",
+      "cores": "14080",
+      "clock": "2500"
+    },
+    "RTX Pro 4500 Blackwell": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "256",
+      "speed": "28",
+      "cores": "10496",
+      "clock": "2550"
+    },
+    "RTX Pro 4000": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "192",
+      "speed": "28",
+      "cores": "8960",
+      "clock": "2550"
+    },
+    "RTX Pro 2000": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "128",
+      "speed": "18",
+      "cores": "4352",
+      "clock": "2550"
+    },
+    "RTX 6000 Ada Generation": {
+      "arch": "Ada Lovelace (2022-2024)",
+      "bus": "384",
+      "speed": "20",
+      "cores": "18176",
+      "clock": "2505"
+    },
+    "RTX 5000 Ada Generation": {
+      "arch": "Ada Lovelace (2022-2024)",
+      "bus": "256",
+      "speed": "18",
+      "cores": "12800",
+      "clock": "2550"
+    },
+    "RTX 4500 Ada Generation": {
+      "arch": "Ada Lovelace (2022-2024)",
+      "bus": "192",
+      "speed": "18",
+      "cores": "7680",
+      "clock": "2580"
+    },
+    "RTX 4000 Ada Generation": {
+      "arch": "Ada Lovelace (2022-2024)",
+      "bus": "160",
+      "speed": "18",
+      "cores": "6144",
+      "clock": "2175"
+    },
+    "RTX 4000 SFF Ada Generation": {
+      "arch": "Ada Lovelace (2022-2024)",
+      "bus": "160",
+      "speed": "14",
+      "cores": "6144",
+      "clock": "1560"
+    },
+    "RTX 2000 Ada Generation": {
+      "arch": "Ada Lovelace (2022-2024)",
+      "bus": "128",
+      "speed": "14",
+      "cores": "2816",
+      "clock": "2130"
+    },
+    "RTX A6000": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "384",
+      "speed": "16",
+      "cores": "10752",
+      "clock": "1800"
+    },
+    "RTX A5500": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "384",
+      "speed": "16",
+      "cores": "10240",
+      "clock": "1665"
+    },
+    "RTX A5000": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "384",
+      "speed": "16",
+      "cores": "8192",
+      "clock": "1695"
+    },
+    "RTX A4500": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "320",
+      "speed": "16",
+      "cores": "7168",
+      "clock": "1650"
+    },
+    "RTX A4000": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "6144",
+      "clock": "1560"
+    },
+    "RTX A2000": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "192",
+      "speed": "12",
+      "cores": "3328",
+      "clock": "1200"
+    },
+    "RTX A1000": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "128",
+      "speed": "12",
+      "cores": "2304",
+      "clock": "1462"
+    },
+    "RTX A400": {
+      "arch": "Ampere (2020-2022)",
+      "bus": "64",
+      "speed": "12",
+      "cores": "768",
+      "clock": "1762"
+    },
+    "Titan RTX": {
+      "arch": "Turing (2018-2020)",
+      "bus": "384",
+      "speed": "14",
+      "cores": "4608",
+      "clock": "1770"
+    },
+    "Quadro RTX 8000": {
+      "arch": "Turing (2018-2020)",
+      "bus": "384",
+      "speed": "14",
+      "cores": "4608",
+      "clock": "1770"
+    },
+    "Quadro RTX 6000": {
+      "arch": "Turing (2018-2020)",
+      "bus": "384",
+      "speed": "14",
+      "cores": "4608",
+      "clock": "1770"
+    },
+    "Quadro RTX 5000": {
+      "arch": "Turing (2018-2020)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "3072",
+      "clock": "1815"
+    },
+    "Quadro RTX 4000": {
+      "arch": "Turing (2018-2020)",
+      "bus": "256",
+      "speed": "13",
+      "cores": "2304",
+      "clock": "1545"
     }
   },
   "AMD": {
@@ -373,12 +541,152 @@
       "cores": "2560",
       "clock": "1905"
     },
-    "Radeon RX 580": {
+    "Radeon AI Pro R9700": {
+      "arch": "RDNA 4 (2025+)",
+      "bus": "256",
+      "speed": "20",
+      "cores": "4096",
+      "clock": "2920"
+    },
+    "Radeon Pro W7800 48GB": {
+      "arch": "RDNA 3 (2022-2024)",
+      "bus": "384",
+      "speed": "18",
+      "cores": "4480",
+      "clock": "2499"
+    },
+    "Radeon Pro W6800": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "256",
+      "speed": "16",
+      "cores": "3840",
+      "clock": "2320"
+    },
+    "Radeon Pro W6600": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "128",
+      "speed": "14",
+      "cores": "1792",
+      "clock": "2491"
+    },
+    "Radeon RX 6750 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "192",
+      "speed": "18",
+      "cores": "2560",
+      "clock": "2600"
+    },
+    "Radeon RX 6700": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "160",
+      "speed": "16",
+      "cores": "2304",
+      "clock": "2450"
+    },
+    "Radeon RX 6650 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "128",
+      "speed": "17.5",
+      "cores": "2048",
+      "clock": "2635"
+    },
+    "Radeon RX 6600": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "128",
+      "speed": "14",
+      "cores": "1792",
+      "clock": "2491"
+    },
+    "Radeon RX 6500 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "64",
+      "speed": "18",
+      "cores": "1024",
+      "clock": "2815"
+    },
+    "Radeon RX 6400": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "64",
+      "speed": "16",
+      "cores": "768",
+      "clock": "2321"
+    },
+    "Radeon RX 5700": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "2304",
+      "clock": "1725"
+    },
+    "Radeon RX 5600 XT": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "192",
+      "speed": "14",
+      "cores": "2304",
+      "clock": "1620"
+    },
+    "Radeon RX 5500 XT 8GB": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "128",
+      "speed": "14",
+      "cores": "1408",
+      "clock": "1845"
+    },
+    "Radeon RX 5500 XT 4GB": {
+      "arch": "RDNA 1 / 2 (2019-2022)",
+      "bus": "128",
+      "speed": "14",
+      "cores": "1408",
+      "clock": "1845"
+    },
+    "Radeon VII": {
+      "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
+      "bus": "4096",
+      "speed": "2",
+      "cores": "3840",
+      "clock": "1750"
+    },
+    "Radeon RX Vega 64": {
+      "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
+      "bus": "2048",
+      "speed": "1.89",
+      "cores": "4096",
+      "clock": "1546"
+    },
+    "Radeon RX Vega 56": {
+      "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
+      "bus": "2048",
+      "speed": "1.6",
+      "cores": "3584",
+      "clock": "1471"
+    },
+    "Radeon RX 590": {
+      "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
+      "bus": "256",
+      "speed": "8",
+      "cores": "2304",
+      "clock": "1545"
+    },
+    "Radeon RX 580 8GB": {
       "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
       "bus": "256",
       "speed": "8",
       "cores": "2304",
       "clock": "1340"
+    },
+    "Radeon RX 580 4GB": {
+      "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
+      "bus": "256",
+      "speed": "7",
+      "cores": "2304",
+      "clock": "1340"
+    },
+    "Radeon Pro WX 5100": {
+      "arch": "GCN 4 / 5 (Polaris/Vega) (2016-2019)",
+      "bus": "256",
+      "speed": "5",
+      "cores": "1792",
+      "clock": "1089"
     }
   },
   "Intel": {
