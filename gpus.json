@@ -203,7 +203,14 @@
       "bus": "256",
       "speed": "20",
       "cores": "3584",
-      "clock": "2540"
+      "clock": "2520"
+    },
+    "Radeon RX 9070 GRE": {
+      "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
+      "bus": "192",
+      "speed": "18",
+      "cores": "3072",
+      "clock": "2790"
     },
     "Radeon RX 9060 XT": {
       "arch": "RDNA 3 / 4 / 5+ (2022-2026)",
