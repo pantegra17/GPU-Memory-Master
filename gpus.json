@@ -168,6 +168,13 @@
       "cores": "3072",
       "clock": "1815"
     },
+    "GeForce RTX 2080": {
+      "arch": "Turing (2018-2020)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "2944",
+      "clock": "1710"
+    },
     "GeForce RTX 2070 Super": {
       "arch": "Turing (2018-2020)",
       "bus": "256",
@@ -175,12 +182,33 @@
       "cores": "2560",
       "clock": "1770"
     },
+    "GeForce RTX 2070": {
+      "arch": "Turing (2018-2020)",
+      "bus": "256",
+      "speed": "14",
+      "cores": "2304",
+      "clock": "1620"
+    },
     "GeForce RTX 2060 Super": {
       "arch": "Turing (2018-2020)",
       "bus": "256",
       "speed": "14",
       "cores": "2176",
       "clock": "1650"
+    },
+    "GeForce RTX 2060 12GB": {
+      "arch": "Turing (2018-2020)",
+      "bus": "192",
+      "speed": "14",
+      "cores": "2176",
+      "clock": "1650"
+    },
+    "GeForce RTX 2060": {
+      "arch": "Turing (2018-2020)",
+      "bus": "192",
+      "speed": "14",
+      "cores": "1920",
+      "clock": "1680"
     },
     "GeForce GTX 1080 Ti": {
       "arch": "Pascal (2016-2018)",
