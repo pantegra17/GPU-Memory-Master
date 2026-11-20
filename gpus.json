@@ -415,7 +415,7 @@
       "bus": "256",
       "speed": "16",
       "cores": "3072",
-      "clock": "1700"
+      "clock": "2000"
     },
     "Arc A380": {
       "arch": "Arc A-Series (Alchemist) (2022-2024)",
