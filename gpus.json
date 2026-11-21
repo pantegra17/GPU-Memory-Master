@@ -257,7 +257,7 @@
       "bus": "256",
       "speed": "28",
       "cores": "10496",
-      "clock": "2550"
+      "clock": "2407"
     },
     "RTX Pro 4000": {
       "arch": "Blackwell (2024-2026)",
