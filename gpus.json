@@ -740,49 +740,49 @@
   },
   "Intel": {
     "Arc B580": {
-      "arch": "Arc B-Series (Battlemage) (2024+)",
+      "arch": "Battlemage (2024+)",
       "bus": "192",
       "speed": "19",
       "cores": "2560",
       "clock": "2670"
     },
     "Arc B570": {
-      "arch": "Arc B-Series (Battlemage) (2024+)",
+      "arch": "Battlemage (2024+)",
       "bus": "160",
       "speed": "19",
       "cores": "2304",
       "clock": "2500"
     },
     "Arc A770": {
-      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "arch": "Alchemist (2022-2024)",
       "bus": "256",
       "speed": "17.5",
       "cores": "4096",
       "clock": "2100"
     },
     "Arc A750": {
-      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "arch": "Alchemist (2022-2024)",
       "bus": "256",
       "speed": "16",
       "cores": "3584",
       "clock": "2050"
     },
     "Arc A580": {
-      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "arch": "Alchemist (2022-2024)",
       "bus": "256",
       "speed": "16",
       "cores": "3072",
       "clock": "2000"
     },
     "Arc A380": {
-      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "arch": "Alchemist (2022-2024)",
       "bus": "96",
       "speed": "15.5",
       "cores": "1024",
       "clock": "2050"
     },
     "Arc A310": {
-      "arch": "Arc A-Series (Alchemist) (2022-2024)",
+      "arch": "Alchemist (2022-2024)",
       "bus": "64",
       "speed": "15.5",
       "cores": "768",
