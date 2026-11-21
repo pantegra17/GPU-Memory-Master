@@ -16,22 +16,35 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Extract What's New Notes
+      - name: Extract Release Notes
+        env:
+          TAG_NAME: ${{ github.ref_name }}
         run: |
           python -c "
-          import re
+          import os, subprocess, re
+          tag = os.environ.get('TAG_NAME', '')
+          notes = ''
           try:
-              content = open('README.md', encoding='utf-8').read()
-              m = re.search(r\"## What's New[^\n]*\n([\s\S]*?)(?=\n## |\n<|\Z)\", content)
-              notes = m.group(0).strip() if m else ''
+              out = subprocess.check_output(['git', 'tag', '-l', '--format=%(contents)', tag], text=True).strip()
+              if out:
+                  notes = out
           except Exception:
-              notes = ''
+              pass
+          if not notes:
+              try:
+                  content = open('README.md', encoding='utf-8').read()
+                  m = re.search(r\"## What's New[^\n]*\n([\s\S]*?)(?=\n## |\n<|\Z)\", content)
+                  notes = m.group(0).strip() if m else ''
+              except Exception:
+                  notes = ''
           with open('release_notes.md', 'w', encoding='utf-8') as f:
               f.write(notes + '\n\n')
           "
