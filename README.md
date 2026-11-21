@@ -12,6 +12,7 @@ A modern desktop application built with Python and CustomTkinter designed for an
 - **Separated Architectures:** Split NVIDIA Ada Lovelace / Ampere and AMD RDNA 4 / RDNA 3 into distinct architectures with dedicated per-generation tensor/AI multipliers.
 - **AMD Radeon RX 9000 Series (RDNA 4):** Added Radeon RX 9070 XT, RX 9070, RX 9070 GRE, RX 9060 XT, and RX 9060 to the cloud preset database.
 - **Massive Workstation & Classic GPU Expansion:** Added 40+ professional, enterprise, and popular GPUs including NVIDIA RTX Pro Blackwell, RTX Ada Generation, RTX Ampere (A-Series), Quadro RTX, Titan RTX, and AMD Radeon AI Pro R9700, Radeon Pro (W7800 48GB, W6800, W6600, WX 5100), Radeon VII, Vega 64/56, and RX 6000/5000/Polaris lineups with VRAM-specific bandwidth distinctions (e.g., RX 580 8GB vs 4GB).
+- **Full NVIDIA GeForce RTX 50-Series Lineup:** Added GeForce RTX 5070 Ti, RTX 5070, RTX 5060 Ti, RTX 5060, and RTX 5050 presets with reference Blackwell GDDR7 specifications, and aligned RTX 5080 boost clock to reference 2617 MHz.
 - **Expanded Intel & NVIDIA Presets:** Added GeForce RTX 3080 12GB, RTX 3050 8GB/6GB, full Turing lineup (RTX 2080, 2070, 2060 12GB, 2060), and Intel Arc A310 alongside retail partner clock adjustments for Arc A580 and A380.
 - **Unified Core Architecture:** Standardized input and calculations across all brands for seamless benchmarking and overclocking.
 

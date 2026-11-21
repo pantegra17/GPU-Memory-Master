@@ -12,7 +12,42 @@
       "bus": "256",
       "speed": "30",
       "cores": "10752",
-      "clock": "2685"
+      "clock": "2617"
+    },
+    "GeForce RTX 5070 Ti": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "256",
+      "speed": "28",
+      "cores": "8960",
+      "clock": "2450"
+    },
+    "GeForce RTX 5070": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "192",
+      "speed": "28",
+      "cores": "6144",
+      "clock": "2512"
+    },
+    "GeForce RTX 5060 Ti": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "128",
+      "speed": "28",
+      "cores": "4608",
+      "clock": "2572"
+    },
+    "GeForce RTX 5060": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "128",
+      "speed": "28",
+      "cores": "3840",
+      "clock": "2500"
+    },
+    "GeForce RTX 5050": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "128",
+      "speed": "20",
+      "cores": "2560",
+      "clock": "2572"
     },
     "GeForce RTX 4090": {
       "arch": "Ada Lovelace (2022-2024)",
