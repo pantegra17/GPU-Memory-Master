@@ -243,7 +243,21 @@
       "bus": "512",
       "speed": "28",
       "cores": "24064",
-      "clock": "2500"
+      "clock": "2617"
+    },
+    "RTX Pro 6000 Server": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "512",
+      "speed": "28",
+      "cores": "24064",
+      "clock": "2495"
+    },
+    "RTX Pro 6000 Max-Q": {
+      "arch": "Blackwell (2024-2026)",
+      "bus": "512",
+      "speed": "28",
+      "cores": "24064",
+      "clock": "2280"
     },
     "RTX Pro 5000 48GB": {
       "arch": "Blackwell (2024-2026)",
