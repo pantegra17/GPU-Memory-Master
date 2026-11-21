@@ -19,7 +19,7 @@
       "bus": "256",
       "speed": "28",
       "cores": "8960",
-      "clock": "2450"
+      "clock": "2452"
     },
     "GeForce RTX 5070": {
       "arch": "Blackwell (2024-2026)",
@@ -40,7 +40,7 @@
       "bus": "128",
       "speed": "28",
       "cores": "3840",
-      "clock": "2500"
+      "clock": "2497"
     },
     "GeForce RTX 5050": {
       "arch": "Blackwell (2024-2026)",
