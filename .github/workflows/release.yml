@@ -32,12 +32,15 @@ jobs:
           import os, subprocess, re
           tag = os.environ.get('TAG_NAME', '')
           notes = ''
-          try:
-              out = subprocess.check_output(['git', 'tag', '-l', '--format=%(contents)', tag], text=True).strip()
-              if out:
-                  notes = out
-          except Exception:
-              pass
+          if os.path.exists('RELEASE_NOTES.md'):
+              notes = open('RELEASE_NOTES.md', encoding='utf-8').read().strip()
+          if not notes:
+              try:
+                  out = subprocess.check_output(['git', 'tag', '-l', '--format=%(contents)', tag], text=True).strip()
+                  if out:
+                      notes = out
+              except Exception:
+                  pass
           if not notes:
               try:
                   content = open('README.md', encoding='utf-8').read()
