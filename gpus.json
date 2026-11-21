@@ -250,7 +250,7 @@
       "bus": "384",
       "speed": "28",
       "cores": "14080",
-      "clock": "2500"
+      "clock": "2308"
     },
     "RTX Pro 4500 Blackwell": {
       "arch": "Blackwell (2024-2026)",
